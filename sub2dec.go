@@ -10,6 +10,8 @@ import (
 )
 
 // build v0.1
+// Usage: sub2dec <classful subnet mask>
+// Example: ./sub2dec /16
 
 var index int
 var maxSubnetLength = 32
