@@ -1,2 +1,23 @@
 # NEToolset
 Network Engineer Toolset is an "in-development" collection of networking tools and utilities that solidify and accentuate the process of deploying network based tooling across areas relative to the domain of network operations/engineering.
+
+## Source Files:
+`fcurl.c`- SOCKS5 proxy "mask" detection via TORSOCKS proxy.
+
+Socks5 proxy points to:
+```C
+#define TORSOCKS5_HOST_PROXY "127.0.0.1:9050"
+```
+
+The FQDN (Fully Qualified Domain Name) target points to:
+```C
+#define SOCKS5_PROXY_FQDN "https://www.ifconfig.me"
+```
+
+`sub2dec.go` - A basic tool used for calculating nodes available within the subnet via classful/classless target prefix notation (Ex: /24, /13, etc)
+
+`detectpacket.go` - A source tool for obtaining IPv4 packet header information that can be used to display target indicators (via setHost = true) or NHS (Null Host Source: identifies as a target not being set)
+
+Subsequent information displayed to the terminal shows all packets that have been copied over to the primary network interface for filtering. Targets that appear are ALL packets copied and sent over to the NIC defined by "device string" within `detectpacket.go`.
+* `detectpacket.go` captures ALL traffic sent to NIC.
+* Display's NHS (Null Host Source) as well as THA (Target Host Acquisition) packet function format strings.
