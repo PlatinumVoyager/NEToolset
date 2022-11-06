@@ -72,7 +72,6 @@ func detectTCPSYNPacket(packet gopacket.Packet, host string) {
 					DST_IP = fmt.Sprintf("%v%s%v", DST_SOURCE_OUTLINE, dstIP, ESCAPE)
 				)
 
-				// check for SYN flag in TCP packet header from target
 				if setHost == true && ip.SrcIP.String() == host {
 
 					// THA - Target Host Acquisition // IP address was set
