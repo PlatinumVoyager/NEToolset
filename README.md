@@ -14,7 +14,7 @@ The FQDN (Fully Qualified Domain Name) target points to:
 #define SOCKS5_PROXY_FQDN "https://www.ifconfig.me"
 ```
 
-`sub2dec.go` - A basic tool used for calculating nodes available within the subnet via classful/classless target prefix notation (Ex: /24, /13, etc)
+`sub2dec.go` - A basic tool used for calculating nodes available within a subnet via classful/classless target prefix notation (Ex: /24, /13, etc)
 
 `detectpacket.go` - A source tool for obtaining IPv4 packet header information that can be used to display target indicators (via setHost = true) or NHS (Null Host Source: identifies as a target not being set)
 
