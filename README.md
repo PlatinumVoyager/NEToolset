@@ -18,6 +18,6 @@ The FQDN (Fully Qualified Domain Name) target points to:
 
 `detectpacket.go` - A source tool for obtaining IPv4 packet header information that can be used to display target indicators (via setHost = true) or NHS (Null Host Source: identifies as a target not being set)
 
-Subsequent information displayed to the terminal shows all packets that have been copied over to the primary network interface for filtering. Targets that appear are ALL layer layer 3 (Network) packets where the TCP/IPv4 source and destination address is set to your link-local address and sent over to the NIC defined by "device string" within `detectpacket.go`.
+Subsequent information displayed to the terminal shows all packets that have been copied over to the primary network interface for filtering. Targets that appear are ALL layer layer 3 (Network) packets where the TCP/IPv4 source or destination address is set to your link-local address and copied from the source NIC defined by "device string" within `detectpacket.go` thus allowing the packet function format string to display them in a later stage during execution in `detectpacket.go`.
 * `detectpacket.go` captures ALL layer 3 (Network) traffic that contains your link-local address sent to NIC.
 * Display's NHS (Null Host Source) as well as THA (Target Host Acquisition) packet function format strings.
