@@ -56,7 +56,6 @@ int main(void)
     scope_multicast_addr.sin_port = htons(SSDP_SCOPE_MULTICAST_PORT);
     scope_multicast_addr.sin_addr.s_addr = inet_addr(SSDP_SCOPE_MULTICAST_ADDR);
 
-
     // utf-8 (mutli-byte string) encode character array (L = unsigned int)
     const wchar_t *msg[] = {
         L"M-SEARCH * HTTP/1.1\r\n",
