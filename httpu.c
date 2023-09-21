@@ -8,10 +8,8 @@
 #include <errno.h>
 #include <signal.h>
 #include <sys/time.h>
-
 #include <sys/socket.h>
 #include <netinet/in.h>
-// #include <linux/ip.h>
 #include <arpa/inet.h>
 
 #define SSDP_SCOPE_MULTICAST_PORT 1900
