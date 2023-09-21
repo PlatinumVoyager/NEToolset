@@ -1,7 +1,3 @@
-// #ifndef _GNU_SOURCE
-// #define _GNU_SOURCE
-// #endif
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -24,7 +20,6 @@
 #define BLUE_OK "[\033[0;34m*\033[0;m]"
 #define GREEN_OK "[\033[0;32m+\033[0;m]"
 #define RED_ERR "[\033[0;31m!\033[0;m]"
-
 
 void httpu_sig_handler(int sigint);
 
@@ -64,7 +59,7 @@ int main(void)
     scope_multicast_addr.sin_addr.s_addr = inet_addr(SSDP_SCOPE_MULTICAST_ADDR);
 
 
-    // might have to utf-8 (mutli-byte string) encode snprintf buffer
+    // utf-8 (mutli-byte string) encode character array (L = unsigned int)
     const wchar_t *msg[] = {
         L"M-SEARCH * HTTP/1.1\r\n",
         L"HOST:239.255.255.250:1900\r\n",
@@ -192,7 +187,6 @@ int main(void)
 
     printf("%s %d Unicast discover responses confirmed.\n", GREEN_OK, UNICAST_RESPONSES);
     printf("\n%s Socket closed successfully.\n", BLUE_OK);
-
 
     return 0;
 }
